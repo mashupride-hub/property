@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -185,6 +185,7 @@
             <p class="about-feature-desc">子供から大人まで大人気の大ヒットアニメ限定フィギュアや巨大ぬいぐるみなど、話題の最新景品もフルラインナップ！</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -628,6 +629,20 @@
         <h2 class="section-jp-title" style="color:white;">募集条件</h2>
       </div>
 
+      <!-- 出店強化エリア -->
+      <div class="focus-area-banner">
+        <div class="focus-area-label">
+          <i class="fa-solid fa-location-dot"></i> 出店強化エリア
+        </div>
+        <div class="focus-area-cities">
+          <span class="focus-city"><i class="fa-solid fa-star"></i> 札幌</span>
+          <span class="focus-city"><i class="fa-solid fa-star"></i> 仙台</span>
+          <span class="focus-city"><i class="fa-solid fa-star"></i> 広島</span>
+          <span class="focus-city"><i class="fa-solid fa-star"></i> 福岡</span>
+        </div>
+        <p class="focus-area-note">※その他地域もお気軽にお問い合わせください</p>
+      </div>
+
       <div class="req-grid">
         <div class="req-card">
           <div class="req-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
@@ -653,9 +668,14 @@
           <div class="req-card-icon"><i class="fa-solid fa-city"></i></div>
           <h3 class="req-card-title">対象ロケーション</h3>
           <ul class="req-card-list">
-            <li>・ロードサイド（幹線道路沿い）</li>
+            <li class="fuei-badge-item">
+              <span>・風営法第5号営業</span>
+              <button type="button" class="badge-fuei-btn" id="open-fuei-modal" aria-label="風営法第5号営業の詳細を見る">
+                <i class="fa-solid fa-circle-info"></i> 詳細
+              </button>
+            </li>
             <li>・商業施設・ショッピングモール</li>
-            <li>・複合ビル・駅前・商店街</li>
+            <li>・複合ビル・ロードサイド</li>
           </ul>
         </div>
 
@@ -668,6 +688,7 @@
             <li>・区画貸し / 土地定期借地</li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
@@ -931,6 +952,80 @@
       </div>
     </div>
   </footer>
+
+  <!-- 風営法第5号営業 モーダル -->
+  <div class="modal-overlay" id="fuei-modal-overlay" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-labelledby="modal-fuei-title">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge"><i class="fa-solid fa-scale-balanced"></i> 法令</span>
+          <h2 class="modal-title" id="modal-fuei-title">風営法第5号営業について</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="close-fuei-modal" aria-label="閉じる">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-lead">
+          万代のクレーンゲーム専門店は、風営法第5号営業（ゲームセンター等）として営業しています。<br>
+          そのため、出店には風営法および各都道府県条例で定められた立地条件を満たす必要があります。
+        </p>
+
+        <div class="modal-section">
+          <h3 class="modal-sec-title"><i class="fa-solid fa-map-location-dot"></i> 出店可能な立地条件</h3>
+
+          <div class="modal-subbox">
+            <h4 class="modal-sub-title">用途地域</h4>
+            <p class="modal-text">原則として、以下の用途地域で出店が可能です。</p>
+            <ul class="modal-list check-list">
+              <li>・商業地域</li>
+              <li>・近隣商業地域</li>
+              <li>・準工業地域</li>
+              <li>・工業地域</li>
+              <li>・用途地域の指定がない地域（無指定地域）</li>
+            </ul>
+            <p class="modal-note">※第一種・第二種低層住居専用地域など、住居系用途地域では原則営業できません。</p>
+          </div>
+
+          <div class="modal-subbox">
+            <h4 class="modal-sub-title">保護対象施設</h4>
+            <p class="modal-text">店舗予定地周辺に、以下の保護対象施設がある場合は営業できない場合があります。</p>
+            <ul class="modal-list icon-list">
+              <li><i class="fa-solid fa-school"></i> 小学校・中学校・高校</li>
+              <li><i class="fa-solid fa-child"></i> 幼稚園・保育園・認定こども園</li>
+              <li><i class="fa-solid fa-graduation-cap"></i> 大学</li>
+              <li><i class="fa-solid fa-hospital"></i> 病院・診療所</li>
+              <li><i class="fa-solid fa-book-open"></i> 図書館　など</li>
+            </ul>
+            <p class="modal-alert-box">
+              原則として、<b>店舗敷地から100m以内</b>に保護対象施設がある場合は出店できません。<br>
+              <small>※距離基準や対象施設は都道府県条例により異なります。</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h3 class="modal-sec-title"><i class="fa-solid fa-magnifying-glass-chart"></i> 出店可否について</h3>
+          <p class="modal-text">
+            風営法第5号営業では、用途地域だけでなく、周辺環境や自治体条例も含めて総合的に判断されます。<br>
+            万代では、物件情報をご提供いただければ、用途地域・保護対象施設・各自治体条例を確認したうえで、出店可能性を調査いたします。
+          </p>
+        </div>
+
+        <div class="modal-warning-box">
+          <h4 class="modal-warning-title"><i class="fa-solid fa-triangle-exclamation"></i> 注意事項</h4>
+          <ul class="modal-warning-list">
+            <li>都道府県条例により、距離制限や営業可能区域が異なる場合があります。</li>
+            <li>商業地域であっても、条例により営業できないケースがあります。</li>
+            <li>最終的な営業可否は、所轄警察署および自治体への確認が必要となります。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-yellow modal-inner-close-btn" id="close-fuei-modal-btn">閉じる</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="main.js"></script>
